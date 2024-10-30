@@ -142,8 +142,6 @@ Commands Covered Till NOW
 Some More Commands
 ====================
 
-Not that relevant 
-
 Just give a quick read below 
 
 ![img_9.png](screenshots/img_9.png)
