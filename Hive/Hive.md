@@ -13,18 +13,22 @@ Key Features of Hive
 5. Extensible: Users can write UDFs (User Defined Functions) to extend Hive’s capabilities.
 
 
-BEFORE PROCEEDING MAKE SURE HADOOP SETUP IS DONE
 
+Hive Setup
+---------------------
 
-Create a Warehouse Directory in HDFS:
+BEFORE PROCEEDING WITH THE BELOW DOC MAKE SURE HADOOP SETUP IS DONE
+BEFORE PROCEEDING WITH THE BELOW DOC MAKE SURE HADOOP SETUP IS DONE
+
+1. Create a Warehouse Directory in HDFS:
 
 ```
 hdfs dfs -mkdir -p /user/hive/warehouse
 hdfs dfs -chmod g+w /user/hive/warehouse
 ```
+This created the directory for Hive tables.
 
-
-Initialize Hive Metastore: Hive uses Derby by default as its metastore. We need to initialize it.
+2. Initialize the Hive Metastore: Hive uses Derby by default as its metastore. We need to initialize it.
 
 ```
 schematool -initSchema -dbType derby
@@ -34,8 +38,10 @@ schematool -initSchema -dbType derby
 
 ![img.png](screenshots/img.png)
 
+We have set up the database schema for Hive's metastore above.
 
-Run hive 
+
+3. Run hive 
 
 ```
 hive
@@ -43,8 +49,47 @@ hive
 
 ![img_2.png](screenshots/img_2.png)
 
-Commands
------------
+
+Now we have the Hive shell for table creation and querying. 
+
+
+Commands 
+--------------------
+
+We performed a Project for a BigData Submission
+Below commands were performed for that 
+
+1. Create a database
+
+    CREATE DATABASE my_project_db;
+
+2. Use the database
+
+    USE my_project_db;
+
+3. Create tables in this database
+
+    CREATE TABLE sample_table (
+        id INT,
+        name STRING
+    )
+    STORED AS TEXTFILE;
+    
+4. Verify the database
+
+    SHOW DATABASES;
+    SHOW TABLES;
+
+5. Check table Location in HDFS (Below command is ran outside the Hive Shell)
+
+    hdfs dfs -ls /user/hive/warehouse/my_project_db.db/
+
+
+
+Commands (IGNORE THIS SECTION)
+---------------------------------
+
+Below commands were for the exam practice, you can try them if you want 
 
 1. Show Database 
 
