@@ -3,6 +3,7 @@ Hadoop Setup
 
 
 We'll install Hadoop 3.3.1 and Hive 3.1.2 (compatible with each other).
+And they only works with Java 8 
 
 Prerequisites 
 ----------------
@@ -19,13 +20,13 @@ sudo apt-get update
 sudo apt-get install -y openjdk-8-jdk
 ```
 
-Set Java 11 as the Default Java Version:
+Set Java 8 as the Default Java Version using the below command if other versions of java are also installed on your system:
 
 ```
 sudo update-alternatives --config java
 ```
 
-Follow the prompts to select Java 11 from the list.
+Follow the prompts to select Java 8 from the list.
 
 Verify the Change:
 
