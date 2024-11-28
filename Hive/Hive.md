@@ -62,13 +62,16 @@ Below commands were performed for that
 
 1. Create a database
 
+
     CREATE DATABASE my_project_db;
 
 2. Use the database
 
+
     USE my_project_db;
 
 3. Create tables in this database
+
 
     CREATE TABLE sample_table (
         id INT,
@@ -78,10 +81,15 @@ Below commands were performed for that
     
 4. Verify the database
 
+
     SHOW DATABASES;
     SHOW TABLES;
 
-5. Check table Location in HDFS (Below command is ran outside the Hive Shell)
+![img_8.png](screenshots/img_8.png)
+
+5. Below command is ran outside the Hive Shell
+
+Check table Location in HDFS 
 
     hdfs dfs -ls /user/hive/warehouse/my_project_db.db/
 
