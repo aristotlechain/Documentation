@@ -247,17 +247,26 @@ Now Explaining what all we have done and is running
 
 When we run start-dfs.sh, we're starting the Hadoop Distributed File System (HDFS), which is the storage layer of Hadoop. 
 
-1. Namenode
-    Role: The NameNode is the master node in HDFS.
-    Task it performs:  It manages the file system namespace and keeps metadata about the files.
+1. **Namenode**
 
-2. DataNode
-    Role: The DataNode is the worker node in HDFS.
-    Task it performs:  It stores the actual file data (in the form of blocks) on the local disk.
+    **Role**: The NameNode is the master node in HDFS.
+    
+    **Task it performs**:  It manages the file system namespace and keeps metadata about the files.
+
+
+2. **DataNode**
+  
+    **Role**: The DataNode is the worker node in HDFS.
+    
+    **Task it performs**:  It stores the actual file data (in the form of blocks) on the local disk.
    
-4. SecondaryNameNode
-    Role: The SecondaryNameNode is a helper process for the NameNode.
-    Task it performs:  It periodically merges the edit logs with the fsimage to prevent the NameNode from growing too large. (Edit logs: incremental changes, fsimage: snapshot of the file system metadata)
 
-   Please note that the SecondaryNameNode is not a backup for the NameNode. If the NameNode fails, you cannot failover to the SecondaryNameNode automatically.
+3. **SecondaryNameNode**
+    
+    **Role**: The SecondaryNameNode is a helper process for the NameNode.
+   
+    **Task it performs**:  It periodically merges the edit logs with the fsimage to prevent the NameNode from growing too large. (Edit logs: incremental changes, fsimage: snapshot of the file system metadata)
+    
+    
+Please note that the SecondaryNameNode is not a backup for the NameNode. If the NameNode fails, you cannot failover to the SecondaryNameNode automatically.
 
